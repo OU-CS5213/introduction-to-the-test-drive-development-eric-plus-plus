@@ -13,13 +13,6 @@ class AWSTest {
 	void setUp() throws Exception {
 		 originalAWS = new AWS(this.original);
 	}
-	
-	@Test
-	void testGreeting() {
-		AWS aws = new AWS(original);
-		
-		assertEquals(aws.greeting(), "Hello!");
-	}
 
 	@Test
 	void testGetValues() {
@@ -97,10 +90,8 @@ class AWSTest {
 		assertEquals(expectedValue, b);
 		assertEquals(expectedValue, c);
 		assertEquals(first, result[0]);
-		 
-		
-	
 	}
+	
 	@Test
 	void testFillAndExpandWithNegative() {
 		int position = 1;
@@ -125,6 +116,5 @@ class AWSTest {
 
 	
 	}
-
 
 }
