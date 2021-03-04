@@ -48,7 +48,13 @@ class AWSTest {
 
 	@Test
 	void testToString() {
-		fail("Not yet implemented");
+		int[] x = {1, 2, 3};
+		AWS aws = new AWS(x);
+
+		String expected = "AWS [values=[1, 2, 3]]";
+		String actual = aws.toString();
+		
+		assertEquals(expected, actual);
 	}
 
 	@Test
