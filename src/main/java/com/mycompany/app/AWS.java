@@ -23,7 +23,7 @@ public class AWS {
 	}
 	
 	public String greeting() {
-		return "Goodbye";
+		return "Hello!";
 	}
 
 	public int remove(int i) {
