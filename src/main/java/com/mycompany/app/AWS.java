@@ -21,6 +21,10 @@ public class AWS {
 		super();
 		setValues(values);
 	}
+	
+	public String greeting() {
+		return "Goodbye";
+	}
 
 	public int remove(int i) {
 

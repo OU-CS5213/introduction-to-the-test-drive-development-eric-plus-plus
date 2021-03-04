@@ -13,6 +13,13 @@ class AWSTest {
 	void setUp() throws Exception {
 		 originalAWS = new AWS(this.original);
 	}
+	
+	@Test
+	void testGreeting() {
+		AWS aws = new AWS(original);
+		
+		assertEquals(aws.greeting(), "Hello!");
+	}
 
 	@Test
 	void testGetValues() {
