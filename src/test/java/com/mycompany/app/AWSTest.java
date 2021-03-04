@@ -13,6 +13,14 @@ class AWSTest {
 	void setUp() throws Exception {
 		 originalAWS = new AWS(this.original);
 	}
+	
+	@Test
+	void testGreeting() {
+		int[] x = {1, 2, 3, 4, 5, 6, 7, 8};
+		AWS aws = new AWS(x);
+		
+		assertEquals(aws.greeting(), "Hello");
+	}
 
 	@Test
 	void testGetValues() {

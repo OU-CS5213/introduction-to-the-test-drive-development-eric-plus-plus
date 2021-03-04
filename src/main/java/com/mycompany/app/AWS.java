@@ -3,6 +3,10 @@ import java.util.Arrays;
 public class AWS {
 	private static final int FILLER_VALUE = Integer.MIN_VALUE;
 	private int[] values;
+	
+	public String greeting() {
+		return "Goodbye";
+	}
 
 	public int[] getValues() {
 		return Arrays.copyOf(values, values.length);
