@@ -141,8 +141,27 @@ class AWSTest {
 		assertEquals(expectedValue, c);
 		 
 		assertEquals(first, result[0]);
-
+	}
 	
+	@Test
+	void testRemoveBiggerThan() {
+		int[] x = {1, 1, 2, 2, 3};
+		int threshold = 2;
+
+		AWS aws = new AWS(x);
+		
+		int[] expectedValues = {1, 1, FILLER_VALUE, FILLER_VALUE, FILLER_VALUE};
+		int expectedNumRemoved = 3;
+		
+		int actualNumRemoved = aws.removeBiggerThan(threshold);
+		int[] actualValues = aws.getValues();
+		
+		assertEquals(expectedNumRemoved, actualNumRemoved);
+		assertEquals(expectedValues[0], actualValues[0]);
+		assertEquals(expectedValues[1], actualValues[1]);
+		assertEquals(expectedValues[2], actualValues[2]);
+		assertEquals(expectedValues[3], actualValues[3]);
+		assertEquals(expectedValues[4], actualValues[4]);
 	}
 
 }
