@@ -169,7 +169,7 @@ class AWSTest {
 		int[] x = {1, 2, 3, 10, 12, 13, 20, 60, 90, 100, 101};
 		AWS aws = new AWS(x);
 		
-		int[] expected = {2, 4, 6, 10, 48, 52, 20, 600, 900, 100, 101};
+		int[] expected = {2, 4, 6, 10, 48, 52, 20, 6000, 9000, 100, 101};
 		
 		aws.stepMultiplier();
 		
