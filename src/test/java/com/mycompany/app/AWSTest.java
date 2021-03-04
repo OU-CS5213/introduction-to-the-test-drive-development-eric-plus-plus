@@ -164,4 +164,27 @@ class AWSTest {
 		assertEquals(expectedValues[4], actualValues[4]);
 	}
 
+	@Test
+	void testStepMultiplier() {
+		int[] x = {1, 2, 3, 10, 12, 13, 20, 60, 90, 100, 101};
+		AWS aws = new AWS(x);
+		
+		int[] expected = {2, 4, 6, 10, 48, 52, 20, 600, 900, 100, 101};
+		
+		aws.stepMultiplier();
+		
+		int[] actual = aws.getValues();
+		
+		assertEquals(expected[0], actual[0]);
+		assertEquals(expected[1], actual[1]);
+		assertEquals(expected[2], actual[2]);
+		assertEquals(expected[3], actual[3]);
+		assertEquals(expected[4], actual[4]);
+		assertEquals(expected[5], actual[5]);
+		assertEquals(expected[6], actual[6]);
+		assertEquals(expected[7], actual[7]);
+		assertEquals(expected[8], actual[8]);
+		assertEquals(expected[9], actual[9]);
+		assertEquals(expected[10], actual[10]);
+	}
 }

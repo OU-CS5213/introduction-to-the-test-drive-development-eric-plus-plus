@@ -71,5 +71,11 @@ public class AWS {
 		
 		return numRemoved;
 	}
-
+	
+	public void stepMultiplier() {
+		// multiply all values less than 10 by 2,
+		// and all values that are less than 20 and bigger than 10 by 4,
+		// and all values that are less than 100 and bigger than 20 by 100
+		// (these rules exclude the values 10, 20, and 100)
+	}
 }
