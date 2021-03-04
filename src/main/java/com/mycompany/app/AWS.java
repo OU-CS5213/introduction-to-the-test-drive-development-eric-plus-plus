@@ -5,7 +5,7 @@ public class AWS {
 	private int[] values;
 	
 	public String greeting() {
-		return "Goodbye";
+		return "Hello";
 	}
 
 	public int[] getValues() {
