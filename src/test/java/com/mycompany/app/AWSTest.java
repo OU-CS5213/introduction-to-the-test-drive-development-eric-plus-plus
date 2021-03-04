@@ -146,7 +146,7 @@ class AWSTest {
 	@Test
 	void testRemoveBiggerThan() {
 		int[] x = {1, 1, 2, 2, 3};
-		int threshold = 2;
+		int threshold = 1;
 
 		AWS aws = new AWS(x);
 		

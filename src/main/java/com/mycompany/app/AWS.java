@@ -60,8 +60,16 @@ public class AWS {
 		// remove all values bigger than a threshold that you send
 		// return the number of removed values
 		// use FILLER_VALUE to replace removed values
+		int numRemoved = 0;
 		
-		return 0;
+		for(int i = 0; i < values.length; ++i) {
+			if(values[i] > threshold) {
+				++numRemoved;
+				values[i] = FILLER_VALUE;
+			}
+		}
+		
+		return numRemoved;
 	}
 
 }
